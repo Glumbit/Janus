@@ -1,0 +1,48 @@
+.company {
+	position: relative;
+	overflow-y: hidden;
+}
+
+.company__background {
+	position: absolute;
+	background: #efccd3;
+
+	img {
+		object-fit: cover;
+		opacity: 0.3;
+	}
+}
+
+.company__inner {
+	margin: 50px 0;
+	position: relative;
+	z-index: 2;
+	padding: 50px;
+	background: rgba($color: #ffffff, $alpha: 0.5);
+	border-radius: 100px;
+}
+
+.company__article {
+	margin-bottom: 20px;
+}
+
+.company__subtitle {
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 1.5rem;
+}
+
+.company__phone {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	span {
+		font-size: 2rem;
+	}
+}
+
+.phone {
+	width: 60px;
+	margin-right: 20px;
+}

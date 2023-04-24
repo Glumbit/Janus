@@ -1,0 +1,138 @@
+.pricelist__item {
+	min-width: 455px;
+	max-width: 27%;
+	flex: 0 0 0;
+	border-radius: 20px;
+	border: 2px solid #000000;
+	background: rgb(240, 204, 211);
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+
+	position: relative;
+	overflow: hidden;
+
+	&:not(:last-child) {
+		margin-right: 40px;
+	}
+
+	.subarticle {
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+
+	li {
+		text-transform: capitalize;
+
+		&:last-child {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.cards__background {
+	position: absolute;
+	border-radius: 20px;
+	border: 2px solid rgba($color: #000000, $alpha: 0.3);
+	box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.2);
+	margin-bottom: 20px;
+	width: 100%;
+	height: 100%;
+}
+
+.cards__inner {
+	position: relative;
+	padding: 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgba($color: #ffffff, $alpha: 0.7);
+}
+
+.pricelist__order {
+	position: absolute;
+	transform: translateY(-100%);
+	background: rgb(208, 237, 230);
+	background: linear-gradient(0deg, rgba(240, 204, 211, 1) 0%, rgba(208, 237, 230, 1) 100%);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: transform 1s ease;
+	border-radius: 20px;
+}
+
+.pricelist__inside {
+	position: relative;
+	padding: 5%;
+	height: 90%;
+
+}
+
+.order__form {
+	background: rgba($color: #ffffff, $alpha: 0.5);
+	border-radius: 50px;
+	padding: 0 20px;
+}
+
+.order__close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 30px;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+$width: 45px;
+$height: 23px;
+
+.checkbox {
+	display: flex;
+	align-items: center;
+
+	.subtitle {
+		letter-spacing: normal;
+	}
+}
+
+.checkbox__input {
+	display: none;
+
+	&:checked~.checkbox__style::before {
+		transform: translateX(70%);
+		background-color: rgb(240, 204, 211);
+	}
+}
+
+.checkbox__style {
+	position: relative;
+	width: $width;
+	height: $height;
+	border-radius: $width;
+	background: linear-gradient(90deg, rgba(208, 237, 230, 1) 0%, rgba(240, 204, 211, 1) 100%);
+	border: 2px solid #808080;
+	padding: 2px 2px 5px 2px;
+	margin-right: 10px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: calc($width / 2);
+		height: calc($width / 2);
+		border-radius: 50%;
+		background-color: rgb(208, 237, 230);
+		border: 2px solid #808080;
+		transition: transform 0.5s ease, background-color 0.5s ease;
+	}
+}
+
+.pay {
+	position: absolute;
+	bottom: 3%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+}

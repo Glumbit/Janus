@@ -1,0 +1,25 @@
+.questions {
+	background: #d0ede6;
+}
+
+.questions__inner {
+	padding: 50px 0;
+}
+
+.questions__subarticle {
+	position: relative;
+	text-align: center;
+	margin-bottom: 40px;
+
+
+	&:after {
+		content: '';
+		width: 50%;
+		height: 3px;
+		background: #000000;
+		position: absolute;
+		bottom: -15px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
